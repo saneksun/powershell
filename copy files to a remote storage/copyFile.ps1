@@ -8,7 +8,7 @@ $timestamp = get-date -format g
 @("*******************************************************") + (Get-Content "c:\DB_script_logs\BackupSQLdbs.log") | Set-Content "c:\DB_script_logs\BackupSQLdbs.log" -Encoding UTF8
 $username = 'username'
 $File =  "C:\DB_scripts\pswd.txt"
-$server="\\X.X.X.X\C$\DB_backup"
+$server="\\X.X.X.X\C$\DB_backup"    #  remote storage
 # Check for valid password/cpnnection establishing
 try {$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $username, (Get-Content $File | ConvertTo-SecureString )}
 Catch {        
