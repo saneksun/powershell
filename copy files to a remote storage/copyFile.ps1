@@ -2,7 +2,6 @@
 #>
 
 #Get dates 
-
 $today = get-date -format yyyyMMMdd
 $timestamp = get-date -format g
 @("*******************************************************") + (Get-Content "c:\DB_script_logs\BackupSQLdbs.log") | Set-Content "c:\DB_script_logs\BackupSQLdbs.log" -Encoding UTF8
